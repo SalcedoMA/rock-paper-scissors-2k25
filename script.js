@@ -1,5 +1,6 @@
 let cpuPlay = document.getElementById('cpu-play');
-let winner = document.getElementById('winner')
+let winner = document.getElementById('winner');
+let moves = document.getElementById('moves');
 
 
 function random() {
@@ -27,4 +28,4 @@ function rps(number) {
 }
 
 random();
-rps(random());
+moves.onclick = function () {rps(random())};
