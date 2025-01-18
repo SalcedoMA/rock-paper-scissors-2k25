@@ -37,8 +37,8 @@ function game(user, cpu) {
                 winner.innerText = "The computer wins! Womp womp"
                 break;
             case "scissors":
-                    winner.innerText = "You win!"
-                    break;
+                winner.innerText = "You win!"
+                break;
         }
     } else if (user === "paper") {
         switch (cpu) {
@@ -67,18 +67,11 @@ function game(user, cpu) {
     }
 }
 
-// random();
-// moves.addEventListener('click', event => {
-//     rps(random());
-// })
-
 document.querySelector('#moves').addEventListener('click', event => { //I would've used document.getElementById('moves')
     let btnClicked = event.target;
     if (btnClicked.matches('button')) { //could've used .tagName instead of .matches
       let value = btnClicked.value;
-      console.log(typeof value);
-      console.log(value);
       game(value,rps(random()));
-      return value;
+    //   return value;
     }
   });
