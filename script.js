@@ -4,14 +4,7 @@ const moves = document.getElementById('moves');
 
 
 
-document.querySelector('#moves').addEventListener('click', event => { //I would've used document.getElementById('moves')
-    let btnClicked = event.target;
-    if (btnClicked.matches('button')) { //could've used .tagName instead of .matches
-      let value = btnClicked.value;
-      console.log(value);
-      return value;
-    }
-  });
+
 
 function random() {
     return Math.floor(Math.random() * 3);
@@ -20,22 +13,72 @@ function random() {
 function rps(number) {
     switch (number) {
         case 0:
-            // console.log("rock");
             cpuPlay.innerText = "rock";
             return "rock";
             break;
         case 1:
-            // console.log("paper");
             cpuPlay.innerText = "paper";
             return "paper";
             break;
         case 2:
-            // console.log("scissors");
             cpuPlay.innerText = "scissors";
             return "scissors";
             break;
     } 
 }
 
-random();
-moves.onclick = function () {rps(random())};
+function game(user, cpu) {
+    if (user === "rock") {
+        switch (cpu) {
+            case "rock":
+                winner.innerText = "It's a tie!"
+                break;
+            case "paper":
+                winner.innerText = "The computer wins! Womp womp"
+                break;
+            case "scissors":
+                    winner.innerText = "You win!"
+                    break;
+        }
+    } else if (user === "paper") {
+        switch (cpu) {
+            case "paper":
+                winner.innerText = "It's a tie!"
+                break;
+            case "scissors":
+                winner.innerText = "The computer wins! Womp womp"
+                break;
+            case "rock":
+                winner.innerText = "You win!"
+                break;
+        }
+    } else if (user === "scissors") {
+        switch (cpu) {
+            case "scissors":
+                winner.innerText = "It's a tie!"
+                break;
+            case "rock":
+                winner.innerText = "The computer wins! Womp womp"
+                break;
+            case "paper":
+                winner.innerText = "You win!"
+                break;
+        }
+    }
+}
+
+// random();
+// moves.addEventListener('click', event => {
+//     rps(random());
+// })
+
+document.querySelector('#moves').addEventListener('click', event => { //I would've used document.getElementById('moves')
+    let btnClicked = event.target;
+    if (btnClicked.matches('button')) { //could've used .tagName instead of .matches
+      let value = btnClicked.value;
+      console.log(typeof value);
+      console.log(value);
+      game(value,rps(random()));
+      return value;
+    }
+  });
