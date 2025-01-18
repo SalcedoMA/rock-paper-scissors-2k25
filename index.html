@@ -9,11 +9,14 @@
     <div class="header">
         <h1>Rock Paper Scissors 2k25</h1>
     </div>
+    <div class="Rounds">
+        <h2 style="display: inline;">Rounds: </h2><h2 id="roundcount" style="display: inline;">0</h2><h2 style="display: inline;">/5</h2>
+    </div>
     <div class="leaderboard">
         <h2>Scores</h2>
-        <div class="scores">
-            <p>Player: </p>
-            <p>Computer: </p>
+        <div class="scores" >
+            <p style="display: inline;">Player: </p><p style="display: inline;" id="playerscore">0</p>
+            <p style="display: inline;">Computer: </p><p style="display: inline;" id="cpuscore">0</p>
         </div>
     </div>
     <div class="user">
@@ -23,11 +26,16 @@
             <button type="button" value="paper">paper</button>
             <button type="button" value="scissors">scissors</button>
         </div>
+        <p id="gameover" style="display: none;">Game over :c</p>
     </div>
     <div class="cpu">
         <h2>The computer plays:</h2>
         <p class="cpu-play" id="cpu-play"></p>
         <h3 class="winner" id="winner"></h3>
+    </div>
+    <div id="playagain" style="display: none;">
+        <h3>Play again?</h2>
+        <button type="button" >Play again!</button>
     </div>
     <footer>Copyrignt © Manuel Salcedo Rivas 2025</footer>
 </body>
