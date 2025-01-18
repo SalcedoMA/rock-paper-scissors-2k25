@@ -14,6 +14,12 @@ function disableButtons() {
     });
   }
 
+  function enableButtons() {
+    buttons.forEach(button => {
+      button.disabled = false; 
+    });
+  }
+
 function random() {
             return Math.floor(Math.random() * 3);
         }
@@ -49,9 +55,8 @@ function game(user, cpu) {
                 break;
             case "paper":
                 winner.innerText = "Point for the computer!"
-                cpuScoreText.innerText  = cpuScore.toString();
                 cpuScore += 1;
-                playerScore
+                cpuScoreText.innerText  = cpuScore.toString();
                 break;
             case "scissors":
                 winner.innerText = "Point for you!"
@@ -71,8 +76,8 @@ function game(user, cpu) {
                 break;
             case "rock":
                 winner.innerText = "Point for you!"
-                playerScoreText.innerText  = playerScore.toString();
                 playerScore += 1;
+                playerScoreText.innerText  = playerScore.toString();
                 break;
         }
     } else if (user === "scissors") {
@@ -104,7 +109,7 @@ function game(user, cpu) {
         } else if (cpuScore > playerScore) {
             winner.innerText = "The computer won :c womp womp"
         } else {
-            winner.innerText = "Its a tie!"
+            winner.innerText = "Nobody wins"
         }
     }
 }
@@ -119,6 +124,7 @@ playAgain.addEventListener('click', event => {
     winner.innerText = "";
     playAgain.style.display = "none";
     moves.style.display = "inline";
+    enableButtons();
 })
 
 document.querySelector('#moves').addEventListener('click', event => { //I would've used document.getElementById('moves')
