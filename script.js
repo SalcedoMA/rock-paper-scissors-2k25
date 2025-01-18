@@ -6,10 +6,13 @@ const playerScoreText = document.getElementById('playerscore');
 const cpuScoreText = document.getElementById('cpuscore');
 const gameOver = document.getElementById('gameover');
 const roundCount = document.getElementById('roundcount');
+const buttons = document.querySelectorAll('button.moves');
 
-
-
-
+function disableButtons() {
+    buttons.forEach(button => {
+      button.disabled = true; 
+    });
+  }
 
 function random() {
             return Math.floor(Math.random() * 3);
@@ -93,9 +96,9 @@ function game(user, cpu) {
     } 
     if (rounds === 5) {
         // cpuPlay.innerText += "Game over :c"
+        disableButtons()
         playAgain.style.display = "block";
-        moves.style.display = "none";
-        gameOver.style.display = "inline";
+        // moves.style.display = "none";
         if (playerScore > cpuScore) {
             winner.innerText = "YOU WON!"
         } else if (cpuScore > playerScore) {
