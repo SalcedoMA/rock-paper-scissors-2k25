@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock Paper Scissors 2k25</title>
 </head>
-<body style="background-color:rgb(221, 250, 212);">
+<body>
     <div class="header">
         <h1>Rock Paper Scissors 2k25</h1>
     </div>
-    <div class="Rounds">
-        <h2 style="display: inline;">Rounds: </h2><h2 id="roundcount" style="display: inline;">0</h2><h2 style="display: inline;">/5</h2>
-    </div>
-    <div class="leaderboard">
-        <h2>Scores</h2>
-        <div class="scores" >
-            <p style="display: inline;">Player: </p><p style="display: inline;" id="playerscore">0</p>
-            <p style="display: inline;">Computer: </p><p style="display: inline;" id="cpuscore">0</p>
+    <div class="main-container">
+        <div class="game-container">
+            <div class="user">
+                <h2>Choose your move:</h2>
+                <div id="moves">
+                    <button class="moves" type="button" value="rock">rock</button>
+                    <button class="moves" type="button" value="paper">paper</button>
+                    <button class="moves" type="button" value="scissors">scissors</button>
+                </div>
+            </div>
+            <div class="cpu">
+                <h2>The computer plays:</h2>
+                <p class="cpu-play" id="cpu-play"></p>
+            </div>
+            <div>
+                <h2 class="winner" id="winner"></h2>
+            </div>
+            <div id="playagain" style="display: none;">
+                <h3>Play again?</h2>
+                <button type="button" >Play again!</button>
+            </div>
+        </div>
+        <div class="scores-container">
+            <div class="Rounds">
+                <h2>Rounds: </h2><h2 id="roundcount">0</h2><h2 >/5</h2>
+            </div>
+            <div class="leaderboard">
+                <h2>Scores:</h2>
+                <div class="scores" >
+                    <p>Player: </p><p id="playerscore">0</p>
+                    <p>Computer: </p><p id="cpuscore">0</p>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="user">
-        <h2>Choose your move:</h2>
-        <div id="moves">
-            <button class="moves" type="button" value="rock">rock</button>
-            <button class="moves" type="button" value="paper">paper</button>
-            <button class="moves" type="button" value="scissors">scissors</button>
-        </div>
-    </div>
-    <div class="cpu">
-        <h2>The computer plays:</h2>
-        <p class="cpu-play" id="cpu-play"></p>
-        <h3 class="winner" id="winner"></h3>
-    </div>
-    <div id="playagain" style="display: none;">
-        <h3>Play again?</h2>
-        <button type="button" >Play again!</button>
-    </div>
-    <footer>Copyrignt © Manuel Salcedo Rivas 2025</footer>
+    <div class="footer">Copyrignt © Manuel Salcedo Rivas 2025</div>
 </body>
 <script src="script.js"></script>
 </html>
