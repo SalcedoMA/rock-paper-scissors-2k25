@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #09122C;
+    display: flex;
+    flex-direction: column;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.header {
+    padding: 10px;
+    background-color: #09122C;
+    color: #872341;
+    display: flex;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    margin: 5vh 15vw;
+    color: #09122C;
+    background-color: #872341   ;
+}
+
+.user, .cpu, #playagain, .Rounds, .leaderboard {
+    padding: 20px;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #872341;
+    color: #E17564;
+    padding: 10px;
+
+}
