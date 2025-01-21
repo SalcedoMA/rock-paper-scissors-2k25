@@ -120,6 +120,7 @@ playAgain.addEventListener('click', event => {
     playerScore = 0;
     playerScoreText.innerText = "0";
     cpuScoreText.innerText = "0";
+    roundCount.innerText = "0";
     cpuPlay.innerText = "";
     winner.innerText = "";
     playAgain.style.display = "none";
