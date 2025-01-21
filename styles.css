@@ -43,6 +43,10 @@ body {
                                                                        
 }
 
+.Rounds h2, .scores p{
+    display: inline;
+}
+
 .game-container {
     display: flex;
     flex-direction: column;
