@@ -50,7 +50,6 @@ body {
 .game-container {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     font-size: 30px;
     border: 3px solid #09122C;
     border-radius: 0.5em;
@@ -61,14 +60,25 @@ body {
 .moves, #playagain button {
     background-color: #09122C;
     color: #E17564;
-    padding: 10px 35px;
+    padding: 15px 30px;
     border-radius: 7px;
     border: none;
     margin: 13px 0;
-    font-size: 17px;
+    font-size: 20px;
     font-weight:600;
     width: 30%;
+}
 
+.moves:focus, #playagain button:focus {
+    background-color: #E17564;
+    color: #09122C;
+    /* border: 3px solid #09122C; */
+}
+
+.moves:disabled, #playagain button:disabled {
+    background-color: #814053;
+    color: #5e2e3c;
+    /* border: 3px solid #09122C; */
 }
 
 /* FOOTER */
